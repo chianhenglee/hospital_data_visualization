@@ -1,1 +1,1 @@
-web: gunicorn choropleth_app:server
+web: gunicorn line_plot_countries_times:server
