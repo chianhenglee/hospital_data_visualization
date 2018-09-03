@@ -10,7 +10,9 @@ import pandas as pd
 import numpy as np
 
 
-app = dash.Dash()
+# the following two lines are for deployment through Heroku
+app = dash.Dash(__name__)
+server = app.server
 
 
 df = pd.read_csv('IHME_DALY_line_plot_data_try.csv')
