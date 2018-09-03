@@ -1,0 +1,20 @@
+
+I got the two datasets from http://www.oxxostudio.tw/articles/201803/google-maps-15-geojson-taiwan.html
+
+In the webpage, the data are from:
+https://sheethub.com/
+  https://sheethub.com/ronnywang/100年全國縣市界圖
+https://github.com/g0v/twgeojson
+
+
+
+
+Currently in the counties folder, I use the coarse_TWcounties_geojson file to create geojson file for each county/city.
+
+Also, there are two other files in the folder. One is a list of the names of the counties/cities, the other is a list of lon,lat of the center of the counties.
+
+The lon,lat pairs are done (poorly) using get_county_center_lonlat.py. So manual modification is needed later.
+
+
+
+These raw data are in the original_files folder
