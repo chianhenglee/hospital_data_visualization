@@ -19,11 +19,11 @@ pd.set_option('display.width', 100)
 ### MAIN SCRIPT ###
 
 # the following two lines are for deployment through Heroku
-#app = dash.Dash(__name__)
-#server = app.server
+app = dash.Dash(__name__)
+server = app.server
 
 # the following line is for local setup
-app = dash.Dash()
+#app = dash.Dash()
 
 
 ## load data ##
@@ -167,7 +167,7 @@ def update_graph(n_clicks, id_value, gender_value):
                     t_a_enrol = list(t_a_data['enrol'])[0]
                     t_a_indicator = t_a_meas_sum/t_a_enrol
 
-                    dummy_list.append([id_value,'3',temp_age,t_a_meas_sum,t_a_enrol_sum,t_a_indicator])
+                    dummy_list.append([id_value,'3',temp_age,t_a_meas_sum,t_a_enrol,t_a_indicator])
 
                 filtered_df = pd.DataFrame(
                                         data=dummy_list,
