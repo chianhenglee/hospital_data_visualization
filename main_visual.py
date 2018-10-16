@@ -1,6 +1,7 @@
 
 
 ### IMPORT PACKAGES ###
+import datetime
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
@@ -124,10 +125,10 @@ app.layout = html.Div([
                 {"title": "Select bundle ID(s) and gender and start plotting",
                  "height": 720},  # px
         }
-    )
+    ),
 
     html.Div(),
-    html.H6('Last update: 15:00, Oct 16, 2018 by CHLee.')
+    html.H4('Last update: '+ str(datetime.datetime.now()) +' by Chian-Heng Lee.')
 ])
 
 
