@@ -153,24 +153,24 @@ def update_graph(n_clicks, id_value, gender_value):
     			filtered_df = temp_df[temp_df['sex']=='2']
 
     		else: # the case where gender is 'both' (here I call it '3')
-    			  # This case we have to combine values for different genders to get new values.
-    			print('Selected both gender!')
-    			dummy_list=[]
-    			for temp_age in temp_df['age_group'].unique():
-    				print(temp_age)
-    				t_a_data = temp_df.loc[temp_df['age_group']==temp_age]
-    				# the above line gets a dataframe of two rows (male and female of the same id and age group, and now we just need to recalculate the indicator and combine them)
-    				t_a_meas_sum = t_a_data['measurement'].sum()
-    				t_a_enrol_sum = t_a_data['enrol'].sum()
-    				t_a_indicator = t_a_meas_sum/t_a_enrol_sum
+                  # This case we have to combine values for different genders to get new values.
+                print('Selected both gender!')
+                dummy_list=[]
+                for temp_age in temp_df['age_group'].unique():
+                    print(temp_age)
+                    t_a_data = temp_df.loc[temp_df['age_group']==temp_age]
+                    # the above line gets a dataframe of two rows (male and female of the same id and age group, and now we just need to recalculate the indicator and combine them)
+                    t_a_meas_sum = t_a_data['measurement'].sum()
+                    t_a_enrol = list(t_a_data['enrol'])[0]
+                    t_a_indicator = t_a_meas_sum/t_a_enrol
 
-    				dummy_list.append([id_value,'3',temp_age,t_a_meas_sum,t_a_enrol_sum,t_a_indicator])
+                    dummy_list.append([id_value,'3',temp_age,t_a_meas_sum,t_a_enrol_sum,t_a_indicator])
 
-    			filtered_df = pd.DataFrame(
+                filtered_df = pd.DataFrame(
                                         data=dummy_list,
                                         columns=['bundle_id', 'sex', 'age_group', 'measurement', 'enrol','indicator'])
-    		print('line 171')
-    		print(filtered_df)
+            print('line 171')
+            print(filtered_df)
 
     		## ADD Rows with zeros for missing age groups
     		# It is likely that in the filtered_df, there are age groups that do not have data (i.e. the dataframe simply doesnt have data for a specific age group).
