@@ -19,11 +19,11 @@ pd.set_option('display.width', 100)
 ### MAIN SCRIPT ###
 
 # the following two lines are for deployment through Heroku
-#app = dash.Dash(__name__)
-#server = app.server
+app = dash.Dash(__name__)
+server = app.server
 
 # the following line is for local setup
-app = dash.Dash()
+#app = dash.Dash()
 
 
 ## load data ##

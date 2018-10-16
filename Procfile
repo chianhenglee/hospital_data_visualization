@@ -1,1 +1,1 @@
-web: gunicorn line_plot_countries_times:server
+web: gunicorn main_visual:server
