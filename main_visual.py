@@ -125,6 +125,9 @@ app.layout = html.Div([
                  "height": 720},  # px
         }
     )
+
+    html.Div(),
+    html.H6('Last update: 15:00, Oct 16, 2018 by CHLee.')
 ])
 
 
