@@ -19,11 +19,11 @@ pd.set_option('display.width', 100)
 ### MAIN SCRIPT ###
 
 # the following two lines are for deployment through Heroku
-app = dash.Dash(__name__)
-server = app.server
+#app = dash.Dash(__name__)
+#server = app.server
 
 # the following line is for local setup
-#app = dash.Dash()
+app = dash.Dash()
 
 
 ## load data ##
@@ -142,19 +142,22 @@ def update_graph(n_clicks, id_value, gender_value):
     for j in range(len(all_data)):
 
     	try:
-	    	##### This section filters given conditions to get filtered_dataframe ######
-    		temp_df = all_data[j][id_value] # get the dataframe of the given bundle_id
-    		# filter gender (note that in the dataframe the column name for gender is sex)
-    		#				(also, both age_ihmec and sex columns are using string, not numbers)
-    		if gender_value=='Male':
-    			filtered_df = temp_df[temp_df['sex']=='1'] # '1' and '2' are used in original dataframes
+            ##### This section filters given conditions to get filtered_dataframe ######
+            temp_df = all_data[j][id_value]
+            # get the dataframe of the given bundle_id
+            # filter gender (note that in the dataframe the column name for gender is sex)
+            #				(also, both age_ihmec and sex columns are using string, not numbers)
+            if gender_value=='Male':
+                filtered_df = temp_df[temp_df['sex']=='1'] # '1' and '2' are used in original dataframes for genders
+            elif gender_value=='Female':
+                filtered_df = temp_df[temp_df['sex']=='2']
 
-    		elif gender_value=='Female':
-    			filtered_df = temp_df[temp_df['sex']=='2']
-
-    		else: # the case where gender is 'both' (here I call it '3')
-                  # This case we have to combine values for different genders to get new values.
+            else:
+                print('Hi!')
+                # the case where gender is 'both' (here I call it '3')
+                # This case we have to combine values for different genders to get new values.
                 print('Selected both gender!')
+
                 dummy_list=[]
                 for temp_age in temp_df['age_group'].unique():
                     print(temp_age)
@@ -176,30 +179,30 @@ def update_graph(n_clicks, id_value, gender_value):
     		# It is likely that in the filtered_df, there are age groups that do not have data (i.e. the dataframe simply doesnt have data for a specific age group).
     		# To deal with that, here find out which age groups are missing and add the age group in with the corresponding data (indicator) being 0.
     		# Beware that this is just for plotting purposes, not necessarily meaningful scientifically.
-    		dummy_list2 = []
-    		for a in all_age_groups:
+            dummy_list2 = []
+            for a in all_age_groups:
 
-    			if a in filtered_df['age_group'].values:
-    				continue# not need to do anything
-    			else:
-    				if gender_value=='Male':
-    					ggg='1'
-    				elif gender_value=='Female':
-    					ggg='2'
-    				else:
-    					ggg='3'
+                if a in filtered_df['age_group'].values:
+                    continue# not need to do anything
+                else:
+                    if gender_value=='Male':
+                        ggg='1'
+                    elif gender_value=='Female':
+                        ggg='2'
+                    else:
+                        ggg='3'
 
-    				print('creading zeros row')
-    				dummy_list2.append([id_value,ggg,a,0,0,0])
+                    print('creading zeros row')
+                    dummy_list2.append([id_value,ggg,a,0,0,0])
 
-    		df_temp=pd.DataFrame(
+            df_temp=pd.DataFrame(
     							data=dummy_list2,
     							columns=['bundle_id', 'sex', 'age_group', 'measurement', 'enrol','indicator'])
 
-    		filtered_df = filtered_df.append(df_temp,ignore_index=True).sort_values('age_group')
+            filtered_df = filtered_df.append(df_temp,ignore_index=True).sort_values('age_group')
 
-    		print('dummy zeros dataframe')
-    		print(df_temp)
+            print('dummy zeros dataframe')
+            print(df_temp)
 
     		#print('Appended filtered_df')
     		#print(filtered_df)
@@ -212,11 +215,11 @@ def update_graph(n_clicks, id_value, gender_value):
 
     		##### Now get the data into the form for bar charts
     		# getting a list of tuples (age group,indicator)
-    		sorted_filtered_df = [(aaa,vvv) for aaa,vvv in zip(filtered_df['age_group'],filtered_df['indicator']*100)] # unit is now %
+            sorted_filtered_df = [(aaa,vvv) for aaa,vvv in zip(filtered_df['age_group'],filtered_df['indicator']*100)] # unit is now %
     		#print(sorted_filtered_df)
     		# trace for bar chart
     		
-    		trace_iter = go.Bar(
+            trace_iter = go.Bar(
     			name=file_names[j],
     			#x=[jj[0] for jj in sorted_filtered_df],
     			x=['<1','1~4','5~9','10~14','15~19','20~24','25~29','30~34','35~39','40~44','45~49','50~54','55~59','60~64','65~69','70~74','75~79','80~84','85~89','90~94','>95'],
@@ -226,7 +229,7 @@ def update_graph(n_clicks, id_value, gender_value):
     			opacity = 0.6,
     			showlegend = True)
 
-    		traces.append(trace_iter)
+            traces.append(trace_iter)
 
 
 
