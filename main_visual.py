@@ -11,6 +11,8 @@ import plotly.graph_objs as go
 import pandas as pd
 import numpy as np
 
+from get_bundle_id_name import get_bundle_id_name # my funciton to get cause name from bundle ids
+
 # We're loading pickle files saved from data_aggregation of stata data
 import pickle
 
@@ -34,6 +36,7 @@ file_names = ['data/ip105_i_processed.pickle',
 			  'data/oip105_i_processed.pickle',
 			  'data/oip105_p_processed.pickle']
 
+
 all_data = {}
 temp_bundle_ids = []
 
@@ -52,10 +55,15 @@ for i,filename in zip(range(len(file_names)),file_names):
 	pickling_off.close()
 
 
+# get cause/disease name from bundle_id
+id_name_dict = get_bundle_id_name('bundle_to_cause_clinical.csv','bundle_id','cause_name')
+
+
+
 # test 
 #print(len(all_data))
 #print(all_data[0][3])
-
+#print(id_name_dict.keys())
 
 ## Get options ##
 
@@ -63,7 +71,20 @@ for i,filename in zip(range(len(file_names)),file_names):
 unique_sorted_bundle_ids = np.unique(np.array([item for sublist in temp_bundle_ids for item in sublist]))
 bundle_id_options=[]
 for b_id in unique_sorted_bundle_ids:
-    bundle_id_options.append({'label':'{}'.format(b_id), 'value':b_id})
+    
+    #there may be missing id names in the csv file so I use try except for now:
+    # use actual cause name when available and use the bundle id when otherwise.
+    # Ideally we should go back and make sure the files corresponds to each other.
+    try:
+        
+        ididid = str(b_id)+': '+id_name_dict[b_id]
+    except:
+        ididid = b_id
+    
+    
+    bundle_id_options.append({'label':'{}'.format(ididid), 'value':b_id})
+
+    #bundle_id_options.append({'label':'{}'.format(id_name_dict[b_id]), 'value':b_id})
 
 # gender options
 gender_options = []
@@ -80,7 +101,7 @@ all_age_groups = ['000','004','009','014','019','024','029','034','039','044','0
 app.layout = html.Div([
     html.H1('Lulu Lulu Lulu Dashboard',style={'marginLeft':'20px'}),
     html.Div([
-        html.H3('Select bundle_id:', style={'paddingRight':'0px'}),
+        html.H3('Select bundle_id (cause name):', style={'paddingRight':'0px'}),
         dcc.Dropdown(
             id='my_bundle_id_symbol',
             options=bundle_id_options,

@@ -1,0 +1,278 @@
+bundle_id,bundle_name,rei_id,cause_name
+1,Allforms Tuberculosis 2017 (Not final),,Tuberculosis
+3,Diarrheal diseases,,Diarrheal diseases
+14,Clostridium difficile,,Clostridium difficile
+17,Typhoid fever,,Typhoid fever
+18,Paratyphoid fever,,Paratyphoid fever
+19,Lower respiratory infections,,Lower respiratory infections
+25,Upper respiratory infections,,Upper respiratory infections
+26,Acute otitis media,,Otitis media
+27,Chronic otitis media,,Otitis media
+28,Meningitis Nonfatal Overall,,Meningitis
+44,Epilepsy due to other bacterial meningitis,,Other meningitis
+45,Acute encephalitis,,Encephalitis
+46,Diphtheria remission,,Diphtheria
+47,Mild impairment due to neonatal tetanus,,Tetanus
+49,Varicella seroprevalence,,Varicella and herpes zoster
+50,Herpes zoster incidence,,Varicella and herpes zoster
+53,Visceral leishmaniasis,,Visceral leishmaniasis
+54,Cutaneous and mucocutaneous leishmaniasis,,Cutaneous and mucocutaneous leishmaniasis
+60,Symptomatic cystic echinococcosis,,Cystic echinococcosis
+61,Prevalence of detectable microfiliaria due to lymphatic filariasis,,Lymphatic filariasis
+64,Vision impairment due to trachoma unsqueezed,,Trachoma
+74,Maternal hemorrhage,,Maternal hemorrhage
+75,Hypertensive disorders of pregnancy,,Maternal hypertensive disorders
+76,Eclampsia,,Maternal hypertensive disorders
+77,"Obstructed labor, acute event",,Maternal obstructed labor and uterine rupture
+78,Fistula,,Maternal obstructed labor and uterine rupture
+80,Prevalence of neonatal preterm birth <28 wks,,Neonatal preterm birth
+82,Prevalence of neonatal preterm birth 32-<37 wks,,Neonatal preterm birth
+92,Prevalence of neonatal sepsis and other neonatal infections,,Neonatal sepsis and other neonatal infections
+93,Goiter due to iodine deficiency,,Iodine deficiency
+94,Vision loss due to vitamin A deficiency unsqueezed,,Vitamin A deficiency
+95,Adult tertiary syphilis,,Syphilis
+96,Chlamydial infection,,Chlamydial infection
+97,Gonococcal infection,,Gonococcal infection
+98,Trichomoniasis infection,,Trichomoniasis
+99,Genital herpes,,Genital herpes
+104,Leprosy,,Leprosy
+113,Rheumatic heart disease including heart failure,,Rheumatic heart disease
+114,Myocardial infarction due to ischemic heart disease,,Ischemic heart disease
+115,Angina due to ischemic heart disease,,Ischemic heart disease
+116,Cerebrovascular disease acute,,Stroke
+118,Acute myocarditis,,Myocarditis
+119,Atrial fibrillation and flutter,,Atrial fibrillation and flutter
+121,Endocarditis,,Endocarditis
+122,Chronic obstructive pulmonary disease prepped data,,Chronic obstructive pulmonary disease
+125,Silicosis,,Silicosis
+126,Asbestosis,,Asbestosis
+127,Coal workers pneumoconiosis all countries,,Coal workers pneumoconiosis
+128,Other pneumoconiosis,,Other pneumoconiosis
+129,Asthma prepped data,,Asthma
+130,Interstitial lung disease and pulmonary sarcoidosis,,Interstitial lung disease and pulmonary sarcoidosis
+131,Cirrhosis and other chronic liver diseases,,Cirrhosis and other chronic liver diseases
+138,Appendicitis,,Appendicitis
+139,Paralytic ileus and intestinal obstruction,,Paralytic ileus and intestinal obstruction
+140,"Inguinal, femoral and abdominal hernia, symptomatic",,"Inguinal, femoral, and abdominal hernia"
+141,Noninfective inflammatory bowel disease due to ulcerative colitis cases pre-adjustment,,Inflammatory bowel disease
+142,Noninfective inflammatory bowel disease due to Crohn disease cases pre-adjustment,,Inflammatory bowel disease
+143,Vascular intestinal disorders,,Vascular intestinal disorders
+144,"Gallbladder and biliary diseases, symptomatic episodes",,Gallbladder and biliary diseases
+145,"Pancreatitis, chronic",,Pancreatitis
+146,Alzheimer disease and other dementias,,Alzheimer's disease and other dementias
+147,Parkinson disease,,Parkinson's disease
+148,Multiple sclerosis,,Multiple sclerosis
+149,Migraine cases,,Migraine
+150,Tension-type headache cases,,Tension-type headache
+151,Probable medication overuse headache cases (no longer use),,Migraine
+152,Schizophrenia,,Schizophrenia
+153,Alcohol dependence cases,,Alcohol use disorders
+155,Opioid use disorders cases,,Opioid use disorders
+156,Cocaine use disorders cases,,Cocaine use disorders
+157,Amphetamine use disorders cases,,Amphetamine use disorders
+158,Cannabis use disorders cases,,Cannabis use disorders
+159,Major depressive disorder,,Major depressive disorder
+160,Dysthymia cases,,Dysthymia
+161,Bipolar disorder,,Bipolar disorder
+162,Anxiety disorders cases,,Anxiety disorders
+163,Anorexia nervosa,,Anorexia nervosa
+164,Bulimia nervosa,,Bulimia nervosa
+165,Autism,,Autism
+166,Asperger syndrome and other autistic spectrum disorders,,Asperger syndrome and other autistic spectrum disorders
+167,Attention-deficit/hyperactivity disorder cases,,Attention-deficit/hyperactivity disorder
+168,Conduct disorder cases,,Conduct disorder
+173,Diabetes mellitus,,Diabetes mellitus
+174,Diabetic foot proportion,,Diabetes mellitus
+175,Diabetic neuropathy proportion,,Diabetes mellitus
+176,Diabetic retinopathy,,Diabetes mellitus
+181,Acute glomerulonephritis,,Acute glomerulonephritis
+182,Stage III chronic kidney disease,,Chronic kidney disease
+195,Interstitial nephritis and urinary tract infections,,Urinary tract infections
+196,Acute urolithiasis,,Urolithiasis
+198,Benign prostatic hyperplasia,,Benign prostatic hyperplasia
+199,Uterine fibroids,,Uterine fibroids
+201,Polycystic ovarian syndrome,,Polycystic ovarian syndrome
+202,Endometriosis cases,,Endometriosis
+203,Genital prolapse,,Genital prolapse
+204,Premenstrual syndrome,,Premenstrual syndrome
+206,Beta-thalassemia major parent,,Thalassemias
+207,Hemoglobin E/beta-thalassemia parent,,Thalassemias
+208,Hemoglobin H disease parent,,Thalassemias
+209,Homozygous sickle cell and severe sickle cell/beta-thalassemia parent,,Sickle cell disorders
+210,Hemoglobin SC disease parent,,Sickle cell disorders
+211,Mild sickle cell/beta-thalassemia parent,,Sickle cell disorders
+212,G6PD deficiency,,G6PD deficiency
+213,"Endocrine, metabolic, blood, and immune disorders",,"Endocrine, metabolic, blood, and immune disorders"
+214,Rheumatoid arthritis,,Rheumatoid arthritis
+215,Osteoarthritis of the hip,,Osteoarthritis
+216,Osteoarthritis of the knee,,Osteoarthritis
+217,Low back pain,,Low back pain
+218,Neck pain,,Neck pain
+219,Gout cases,,Gout
+220,Other musculoskeletal disorders including injuries,,Other musculoskeletal disorders
+231,Atopic dermatitis,,Atopic dermatitis
+232,Psoriasis,,Psoriasis
+233,Cellulitis,,Cellulitis
+234,Impetigo,,Pyoderma
+235,Abscess and other bacterial skin diseases,,Pyoderma
+236,Scabies,,Scabies
+237,Tinea capitis,,Fungal skin diseases
+238,Viral warts,,Viral skin diseases
+239,Molluscum contagiosum,,Viral skin diseases
+240,Acne vulgaris,,Acne vulgaris
+241,Alopecia areata,,Alopecia areata
+242,Pruritus,,Pruritus
+243,Urticaria,,Urticaria
+244,Decubitus ulcer,,Decubitus ulcer
+245,Other skin and subcutaneous diseases,,Other skin and subcutaneous diseases
+246,Vision impairment due to glaucoma unsqueezed,,Glaucoma
+248,Vision impairment due to cataract unsqueezed,,Cataract
+250,Vision impairment due to macular degeneration unsqueezed,,Age-related macular degeneration
+255,Age-related and other hearing loss unsqueezed,,Age-related and other hearing loss
+257,Vision impairment due to other vision loss unsqueezed,,Other vision loss
+258,Blindness due to other vision loss unsqueezed,,Other vision loss
+261,Permanent caries prior to edentulism correction,,Caries of permanent teeth
+262,Chronic periodontal disease prior to edentulism correction,,Periodontal diseases
+263,Edentulism,,Edentulism and severe tooth loss
+265,Other transport injuries,,Other transport injuries
+266,Falls,,Falls
+267,Drowning,,Drowning
+268,"Fire, heat, and hot substances",,"Fire, heat, and hot substances"
+271,Adverse effects of medical treatment,,Adverse effects of medical treatment
+273,Pulmonary aspiration and foreign body in airway,,Pulmonary aspiration and foreign body in airway
+274,Other unintentional injuries,,Other unintentional injuries
+277,Epilepsy impairment envelope,193,
+278,Guillain-Barre syndrome impairment envelope,194,
+283,Heart failure impairment envelope,196,
+291,Intellectual disability impairment envelope,197,
+292,Primary infertility impairment envelope,198,
+293,Secondary infertility impairment envelope,198,
+294,Pelvic inflammatory disease impairment envelope,199,
+327,Cutaneous squamous cell carcinoma,,Non-melanoma skin cancer (squamous-cell carcinoma)
+333,Pelvic inflammatory diseases due to chlamydial infection proportion,,Chlamydial infection
+334,Pelvic inflammatory diseases due to gonococcal infection proportion,,Gonococcal infection
+336,Typhoid and paratyphoid fever,,Intestinal infectious diseases
+338,Prevalence of neonatal encephalopathy due to birth asphyxia and trauma,,Neonatal encephalopathy due to birth asphyxia and trauma
+345,Peripheral arterial disease,,Peripheral artery disease
+354,Contact dermatitis,,Contact dermatitis
+355,Seborrhoeic dermatitis,,Seborrhoeic dermatitis
+356,Pedestrian road injuries by road vehicle,,Pedestrian road injuries
+357,Cyclist road injuries,,Cyclist road injuries
+358,Motorcyclist road injuries,,Motorcyclist road injuries
+359,Motor vehicle road injuries,,Motor vehicle road injuries
+360,Other road injuries,,Other road injuries
+361,Unintentional firearm injuries,,Unintentional firearm injuries
+363,Other exposure to mechanical forces,,Other exposure to mechanical forces
+364,Venomous animal contact,,Venomous animal contact
+365,Non-venomous animal contact,,Non-venomous animal contact
+366,Foreign body in eyes,,Foreign body in eyes
+367,Foreign body in other body part,,Foreign body in other body part
+368,Assault by firearm,,Physical violence by firearm
+369,Assault by sharp object,,Physical violence by sharp object
+370,Assault by other means,,Physical violence by other means
+371,Cerebrovascular disease acute first ever,,Stroke
+374,Other fungal skin diseases,,Fungal skin diseases
+396,Vision impairment due to diabetes mellitus,,Diabetes mellitus
+409,Other gynecological cases that are not menstrual disorders,,Other gynecological diseases
+422,Puerperal sepsis,,Maternal sepsis and other maternal infections
+423,Other maternal infections,,Maternal sepsis and other maternal infections
+429,Asymptomatic ischemic heart disease following myocardial infarction,,Ischemic heart disease
+435,Orofacial clefts,,Orofacial clefts
+436,Down syndrome,,Down syndrome
+437,Turner syndrome,,Turner syndrome
+438,Klinefelter syndrome,,Klinefelter syndrome
+439,Other chromosomal congenital anomalies,,Other chromosomal abnormalities
+440,Other oral disorders,,Other oral disorders
+449,Motor neuron disease,,Motor neuron disease
+451,Irritable Bowl Disease DEPRECATED,,Inflammatory bowel disease
+453,Early syphilis infection,,Syphilis
+454,First ever acute ischemic stroke,,Ischemic stroke
+455,First ever acute hemorrhagic stroke,,Intracerebral hemorrhage
+456,Chronic stroke; any type,,Stroke
+458,Neonatal hemolytic disease and other neonatal jaundice ,,Hemolytic disease and other neonatal jaundice
+484,"Exposure to forces of nature, non-disaster ",,Environmental heat and cold exposure
+500,Neonatal preterm birth <37wks,,Neonatal preterm birth
+502,Birth prevalence of neonatal preterm birth 28-36 wks DEPRECATED,,Neonatal preterm birth
+541,Acute other sense organ diseases,,Other sense organ diseases
+542,Chronic other sense organ diseases,,Other sense organ diseases
+543,"Total peptic ulcer disease, symptomatic and asymptomatic",,Peptic ulcer disease
+544,"Total gallbladder and biliary diseases, symptomatic and asymptomatic",,Gallbladder and biliary diseases
+545,"Total gastritis and duodenitis, symptomatic and asymptomatic",,Gastritis and duodenitis
+602,Total musculoskeletal congenital anomalies,,Congenital musculoskeletal and limb anomalies
+604,Limb reduction deficits,,Congenital musculoskeletal and limb anomalies
+606,Polydactyly and syndactyly,,Congenital musculoskeletal and limb anomalies
+608,Total neural tube congenital anomalies,,Neural tube defects
+610,Anencephaly,,Neural tube defects
+612,Encephalocele,,Neural tube defects
+614,Spina bifida,,Neural tube defects
+616,Congenital urinary anomalies,,Urogenital congenital anomalies
+618,Congenital genital anomalies,,Urogenital congenital anomalies
+620,Total digestive congenital anomalies,,Digestive congenital anomalies
+622,Congenital diaphragmatic hernia,,Digestive congenital anomalies
+624,Congenital malformations of the abdominal wall,,Digestive congenital anomalies
+626,Congenital atresia and/or stenosis of the digestive tract,,Digestive congenital anomalies
+628,Total congenital cardiovascular anomalies,,Congenital heart anomalies
+630,Single ventricle and single ventricle pathway heart defects,,Congenital heart anomalies
+632,"Critical malformations of great vessels, congenital valvular heart disease and patent ductus arteriosis",,Congenital heart anomalies
+634,Ventricular septal defect and atrial septal defect,,Congenital heart anomalies
+636,Severe congenital heart defects excluding single ventricle and single ventricle pathway,,Congenital heart anomalies
+638,Edward Syndrome and Patau Syndrome,,Other chromosomal abnormalities
+646,Ectopic pregnancy incidence ratio,,Ectopic pregnancy
+661,Pneumococcal meningitis incidence proportion DEPRECATED,,None
+662,Meningococcal meningitis incidence proportion DEPRECATED,,None
+663,H influenza type B meningitis incidence proportion DEPRECATED,,None
+664,Other meningitis incidence proportion DEPRECATED,,None
+667,Severe Pre-eclampsia,,Maternal hypertensive disorders
+686,"Childhood wasting exposure, <-3 sd (DisMod)",240,
+687,"Childhood wasting exposure, <-2 sd (DisMod) - Proportion",240,
+695,Measles,,Measles
+696,Whooping cough DEPRECATED,,Whooping cough
+751,Self-harm by firearm,,Self-harm by firearm
+752,Self-harm by other specified means,,Self-harm by other specified means
+762,inj_disaster_hosp,,Exposure to forces of nature
+763,inj_war_warterror_hosp,,Conflict and terrorism
+764,inj_war_execution_hosp,,Executions and police conflict
+765,inj_homicide_sexual_ecode,,Sexual violence
+766,inj_homicide_sexual_ncode,,Sexual violence
+833,Other Meningitis -- Viral,,Other meningitis
+899,Total cirrhosis and other chronic liver diseases,,Cirrhosis and other chronic liver diseases
+1010,total_maternal,,Maternal disorders
+1013,"Pancreatitis, acute episodes",,Pancreatitis
+2972,Other musculoskeletal congenital anomalies,,Congenital musculoskeletal and limb anomalies
+2975,Other digestive congenital anomalies,,Digestive congenital anomalies
+2978,Other cardiovascular congenital anomalies,,Congenital heart anomalies
+2987,Calcific aortic valve disease,,Non-rheumatic calcific aortic valve disease
+2990,Other non-rheumatic valve disease DEPRECATED,,Other non-rheumatic valve diseases
+2993,Degenerative mitral valve disease,,Non-rheumatic degenerative mitral valve disease
+2996,First ever acute subarachnoid hemorrhage,,Subarachnoid hemorrhage
+3008,"Total thalassemias, excluding thalassemia trait",,Thalassemias
+3011,"Total sickle cell disorders, excluding sickle cell trait",,Sickle cell disorders
+3020,Hospital/claims data basal cell carcinoma,,Non-melanoma skin cancer (basal-cell carcinoma)
+3023,iNTS incidence data,,Invasive Non-typhoidal Salmonella (iNTS)
+3029,Total chromosomal congenital anomalies,,Other chromosomal abnormalities
+3039,Dm type 1,,Diabetes mellitus type 1
+3044,Poisoning by carbon monoxide,,Poisoning by carbon monoxide
+3047,Poisoning by other means,,Poisoning by other means
+3053,Non-alcoholic steatohepatitis (NASH),,Cirrhosis due to NASH
+3059,Gastroesophageal reflux disease,,Gastroesophageal reflux disease
+3065,congenital hearing loss,,Age-related and other hearing loss
+3074,Poliomyelitis,,Poliomyelitis
+3081,Other hemoglobinopathies,,Other hemoglobinopathies and hemolytic anemias
+3082,Aplastic anemia,,Other hemoglobinopathies and hemolytic anemias
+3086,Other Digestive Diseases,,Other digestive diseases
+3119,menstrual disorders,,Other gynecological diseases
+3131,"Myelodysplastic, myeloproliferative, and other hematopoietic neoplasms",,"Myelodysplastic, myeloproliferative, and other hematopoietic neoplasms"
+3134,Benign and in situ intestinal neoplasms,,Benign and in situ intestinal neoplasms
+3137,Benign and in situ cervical and uterine neoplasms,,Benign and in situ cervical and uterine neoplasms
+3140,Other benign and in situ neoplasms,,Other benign and in situ neoplasms
+3188,Other congenital birth defects,,Other congenital birth defects
+3196,"Peptic ulcer disease, with complication",,Peptic ulcer disease
+3197,"Peptic ulcer disease, uncomplicated, acute",,Peptic ulcer disease
+3198,"Peptic ulcer disease, uncomplicated, chronic",,Peptic ulcer disease
+3200,"Gastritis and duodenitis, with complication",,Gastritis and duodenitis
+3201,"Gastritis and duodenitis, uncomplicated, acute",,Gastritis and duodenitis
+3202,"Gastritis and duodenitis, uncomplicated, chronic",,Gastritis and duodenitis
+3227,Polycystic kidney disease,,Urogenital congenital anomalies
+3260,Upper GI chronic,,Upper digestive system diseases
+3263,Upper GI acute,,Upper digestive system diseases
+3419,Maternal abortive outcome,,Maternal abortion and miscarriage
