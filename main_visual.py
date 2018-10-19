@@ -185,14 +185,15 @@ def update_graph(n_clicks, id_value, gender_value):
 
                 dummy_list=[]
                 for temp_age in temp_df['age_group'].unique():
-                    print(temp_age)
+                    #print(temp_age)
                     t_a_data = temp_df.loc[temp_df['age_group']==temp_age]
+                    #print(t_a_data)
                     # the above line gets a dataframe of two rows (male and female of the same id and age group, and now we just need to recalculate the indicator and combine them)
                     t_a_meas_sum = t_a_data['measurement'].sum()
-                    t_a_enrol = list(t_a_data['enrol'])[0]
-                    t_a_indicator = t_a_meas_sum/t_a_enrol
+                    t_a_enrol_sum = t_a_data['enrol'].sum()
+                    t_a_indicator = t_a_meas_sum/t_a_enrol_sum
 
-                    dummy_list.append([id_value,'3',temp_age,t_a_meas_sum,t_a_enrol,t_a_indicator])
+                    dummy_list.append([id_value,'3',temp_age,t_a_meas_sum,t_a_enrol_sum,t_a_indicator])
 
                 filtered_df = pd.DataFrame(
                                         data=dummy_list,
