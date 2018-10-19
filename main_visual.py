@@ -36,6 +36,12 @@ file_names = ['data/ip105_i_processed.pickle',
 			  'data/oip105_i_processed.pickle',
 			  'data/oip105_p_processed.pickle']
 
+# give legend names for the corresponding files that we specified above.
+legend_names = ['住院105_i',
+                '住院105_p',
+                '門診+住院_105_i',
+                '門診+住院_105_p']
+
 
 all_data = {}
 temp_bundle_ids = []
@@ -246,7 +252,8 @@ def update_graph(n_clicks, id_value, gender_value):
     		# trace for bar chart
     		
             trace_iter = go.Bar(
-    			name=file_names[j],
+    			#name=file_names[j],
+                name=legend_names[j],
     			#x=[jj[0] for jj in sorted_filtered_df],
     			x=['<1','1~4','5~9','10~14','15~19','20~24','25~29','30~34','35~39','40~44','45~49','50~54','55~59','60~64','65~69','70~74','75~79','80~84','85~89','90~94','>95'],
     			y=[jj[1] for jj in sorted_filtered_df],
