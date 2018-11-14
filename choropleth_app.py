@@ -388,7 +388,7 @@ def update_graph2(n_clicks, year, age, gender, figure):
                 #            ),
                 xaxis = dict(
                             title='Values',
-                            domain=[0.1]
+                            domain=[0,1]
 
                             ),
                 #barmode='group',
