@@ -166,13 +166,13 @@ app.layout = html.Div([
     [State('my_bundle_id_symbol', 'value'),
     State('my_gender_symbol', 'value')])
 
-def update_graph(n_clicks, id_value, gender_value):
+def update_graph(n_clicks, id_value,gender_value):
+
 
     traces = [] 
 	# loop through filenames and store data corresponding to each file into a trace
     for j in range(len(all_data)):
-
-    	try:
+        try:
             ##### This section filters given conditions to get filtered_dataframe ######
             temp_df = all_data[j][id_value]
             # get the dataframe of the given bundle_id
@@ -242,9 +242,6 @@ def update_graph(n_clicks, id_value, gender_value):
 
 
 
-
-
-
     		##### Now get the data into the form for bar charts
     		# getting a list of tuples (age group,indicator)
             sorted_filtered_df = [(aaa,vvv) for aaa,vvv in zip(filtered_df['age_group'],filtered_df['indicator']*100)] # unit is now %
@@ -264,16 +261,14 @@ def update_graph(n_clicks, id_value, gender_value):
 
             traces.append(trace_iter)
 
-
-
-
-    	except:
-    		pass
+        except:
+            pass
 
 
     bar_charts_data = go.Data(traces)
 
     bar_charts_layout = go.Layout(
+                                title = str(id_name_dict[id_value])+' ('+str(gender_value)+')',
     							xaxis = dict(
     										title='Age Groups (yrs old)',
     										domain=[0,1]),
