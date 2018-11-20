@@ -275,14 +275,14 @@ def update_graph(n_clicks, id_value, gender_value):
 
     bar_charts_layout = go.Layout(
     							xaxis = dict(
-    										title='Age Groups',
+    										title='Age Groups (yrs old)',
     										domain=[0,1]),
-    							yaxis = dict(title='Indicator (%)'),
+    							yaxis = dict(title='Prevalence (%)'),
 
     							barmode='group',
     							showlegend=True,
-    							height=700,
-    							width=1450
+    							height=500,
+    							width=1000
     							)
 
 
