@@ -1,0 +1,83 @@
+.entire-page {
+  font-family: Helvetica;
+  padding-left: 20px;
+}
+
+/* Don't set anything with div. Use className instead */
+
+h1 {
+  font-size:30px;
+  font-family: Georgia;
+  padding-left: 0px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 1px;
+  margin-bottom: 1px;
+  text-align: left;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.5; /* no unit here means line spacing is 1.5 lines*/
+}
+
+.dropdown_section {
+
+  display: inline-block;
+  font-weight: 400;  /* = normal */
+  font-size: 14px;
+
+  margin: 0;
+  padding: 8px;
+  
+  width: 430px;
+  vertical-align: middle;
+}
+
+.the_button {
+
+  display: inline-block;
+  margin: 0px 0px 0px 0px;
+
+  line-height: 70px;
+  width: 100px;
+
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  
+  background-color: transparent;
+  border-radius: 6px;
+  border: 1.3px solid ;
+  cursor: pointer;
+  box-sizing: border-box; 
+}
+
+.the_button:hover {
+    background-color: gray;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+display: inline;   --> the element goes in the line.
+display: inline-block --> the element goes in the line but you can set width and height of the element;
+display: block;       --> the element is always in a separate line and you can set width and height.
+*/
+
+

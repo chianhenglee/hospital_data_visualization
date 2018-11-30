@@ -105,43 +105,49 @@ all_age_groups = ['000','004','009','014','019','024','029','034','039','044','0
 ## App Layout ##
 
 app.layout = html.Div([
-    html.H1('Lulu Lulu Lulu Dashboard',style={'marginLeft':'20px'}),
+    html.H1('Lulu Lulu Lulu Dashboard'),
+
+
+    html.P('This dashboard is a simple tool to visualize disease prevalence across different age groups in Taiwan.'),
+    html.P('An evidence-based comparative risk assessment revealed that substantial mortality burden and premature deaths could be attributable to cardiometabolic risk factors, tobacco smoking, alcohol use, viral hepatitis, and ambient air pollution among Taiwanese adults. The study was led by Wei-Cheng Lo, a doctoral student from the College of Public Health at National Taiwan University. The investigators estimated the number of deaths and years of life lost that were attributable to 13 metabolic, lifestyle, infectious, and environmental risk factors in Taiwan. These findings were published in Population Health Metrics in May.'),
+
+    html.Hr(),
+
+    ### select bundle id ###
     html.Div([
-        html.H3('Select bundle_id (cause name):', style={'paddingRight':'0px'}),
+        html.H3('Select bundle_id (cause name):'),
         dcc.Dropdown(
+            className = 'dropdown',
             id='my_bundle_id_symbol',
             options=bundle_id_options,
-            #value='Taiwan',
+            #value='28: Meningitis',
             placeholder='Select one',
             multi=False
         )
-    ], style={'display':'inline-block', 'verticalAlign':'top', 'width':'80%','marginLeft':'20px'}),
+    ],className='dropdown_section'),
     
-    html.Div(),
-
+    ### select gender ###
     html.Div([
-        html.H3('Select gender:', style={'paddingRight':'0px'}),
+        html.H3('Select gender:'),
         dcc.Dropdown(
+            className = 'dropdown',
             id='my_gender_symbol',
             options=gender_options,
-            #value='Taiwan',
+            #value='Both',
             placeholder='Select one',
             multi=False
         )
-    ], style={'display':'inline-block', 'verticalAlign':'top', 'width':'80%','marginLeft':'20px'}),
-    
-    html.Div(),
-    html.Div(),
+    ],className='dropdown_section'),
 
-    html.Div([
-        html.Button(
+    ### Button ###
+    html.Button(
             id='submit-button_barcharts',
             n_clicks=0,
-            children='Plot them out!',
-            style={'fontSize':20, 'marginLeft':'20px'}
+            children='Plot',
+            className = 'the_button'
         ),
-    ], style={'display':'inline-block'}),
     
+    ### graph ###
     dcc.Graph(
         id='my_graph',
         figure={
@@ -155,8 +161,8 @@ app.layout = html.Div([
     ),
 
     html.Div(),
-    html.H4('Last update: '+ str(datetime.datetime.now()) +' by Chian-Heng Lee.')
-])
+    html.H6('Last update: '+ str(datetime.datetime.now()) +' by Chian-Heng Lee.')
+],className='entire-page')
 
 
 ###########################
@@ -238,7 +244,6 @@ def update_graph(n_clicks, id_value,gender_value):
 
     		#print('Appended filtered_df')
     		#print(filtered_df)
-
 
 
 
