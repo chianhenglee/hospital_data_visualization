@@ -105,64 +105,88 @@ all_age_groups = ['000','004','009','014','019','024','029','034','039','044','0
 ## App Layout ##
 
 app.layout = html.Div([
-    html.H1('Lulu Lulu Lulu Dashboard'),
 
-
-    html.P('This dashboard is a simple tool to visualize disease prevalence across different age groups in Taiwan.'),
-    html.P('An evidence-based comparative risk assessment revealed that substantial mortality burden and premature deaths could be attributable to cardiometabolic risk factors, tobacco smoking, alcohol use, viral hepatitis, and ambient air pollution among Taiwanese adults. The study was led by Wei-Cheng Lo, a doctoral student from the College of Public Health at National Taiwan University. The investigators estimated the number of deaths and years of life lost that were attributable to 13 metabolic, lifestyle, infectious, and environmental risk factors in Taiwan. These findings were published in Population Health Metrics in May.'),
-
-    html.Hr(),
-
-    ### select bundle id ###
-    html.Div([
-        html.H3('Select bundle_id (cause name):'),
-        dcc.Dropdown(
-            className = 'dropdown',
-            id='my_bundle_id_symbol',
-            options=bundle_id_options,
-            #value='28: Meningitis',
-            placeholder='Select one',
-            multi=False
-        )
-    ],className='dropdown_section'),
-    
-    ### select gender ###
-    html.Div([
-        html.H3('Select gender:'),
-        dcc.Dropdown(
-            className = 'dropdown',
-            id='my_gender_symbol',
-            options=gender_options,
-            #value='Both',
-            placeholder='Select one',
-            multi=False
-        )
-    ],className='dropdown_section'),
-
-    ### Button ###
-    html.Button(
-            id='submit-button_barcharts',
-            n_clicks=0,
-            children='Plot',
-            className = 'the_button'
+    ### Header ###
+    html.Div(
+        html.Header([
+            ]),
         ),
-    
-    ### graph ###
-    dcc.Graph(
-        id='my_graph',
-        figure={
-            'data': [],
-#                {'x': [], 'y': []}
- #           ],
-            'layout':
-                {"title": "Select bundle ID(s) and gender and start plotting",
-                 "height": 720},  # px
-        }
-    ),
 
-    html.Div(),
-    html.H6('Last update: '+ str(datetime.datetime.now()) +' by Chian-Heng Lee.')
-],className='entire-page')
+    ### Body ###
+    html.Div([
+
+        ## Title and paragraphs ##
+        html.H1('Lulu Lulu Lulu Dashboard'),
+        html.Div([
+            html.P('This dashboard is a simple tool to visualize disease prevalence across different age groups in Taiwan.'),
+            html.P('An evidence-based comparative risk assessment revealed that substantial mortality burden and premature deaths could be attributable to cardiometabolic risk factors, tobacco smoking, alcohol use, viral hepatitis, and ambient air pollution among Taiwanese adults. The study was led by Wei-Cheng Lo, a doctoral student from the College of Public Health at National Taiwan University. The investigators estimated the number of deaths and years of life lost that were attributable to 13 metabolic, lifestyle, infectious, and environmental risk factors in Taiwan. These findings were published in Population Health Metrics in May.'),
+            ],className='paragraph'),
+
+        ## Entire interactive graph section ##
+        html.Div([
+
+            # Select bundle ID #
+            html.Div([
+                html.H3('Select bundle_id (cause name):'),
+                dcc.Dropdown(
+                    className = 'dropdown',
+                    id='my_bundle_id_symbol',
+                    options=bundle_id_options,
+                    #value='28: Meningitis',
+                    placeholder='Select one',
+                    multi=False
+                )
+            ],className='dropdown_section'),
+
+            # Select gender #
+            html.Div([
+                html.H3('Select gender:'),
+                dcc.Dropdown(
+                    className = 'dropdown',
+                    id='my_gender_symbol',
+                    options=gender_options,
+                    #value='Both',
+                    placeholder='Select one',
+                    multi=False
+                )
+            ],className='dropdown_section'),
+
+            # Button #
+            html.Button(
+                id='submit-button_barcharts',
+                n_clicks=0,
+                children='Plot',
+                className = 'the_button'
+                ),
+
+            # Graph #
+            dcc.Graph(
+                id='my_graph',
+                className='graph',
+                figure={
+                    'data': [],
+                    'layout':
+                        {"title": "Select bundle ID(s) and gender and start plotting",
+                        "height": 720},  # px
+                        },
+                )
+        ],className='entire-interactive-graph'),
+
+
+    ],className='page-content'),
+
+    ### Footer
+    html.Div(
+        html.Footer([
+            html.Br(),
+            html.H5('2016 Taiwan National Burden of Disease'),
+            html.H5('School of Public Health, National Taiwan University')
+            ]
+        ),
+    )
+
+])
+
 
 
 ###########################
@@ -173,6 +197,7 @@ app.layout = html.Div([
     State('my_gender_symbol', 'value')])
 
 def update_graph(n_clicks, id_value,gender_value):
+
 
 
     traces = [] 
@@ -273,7 +298,7 @@ def update_graph(n_clicks, id_value,gender_value):
     bar_charts_data = go.Data(traces)
 
     bar_charts_layout = go.Layout(
-                                title = str(id_name_dict[id_value])+' ('+str(gender_value)+')',
+                                #title = str(id_name_dict[id_value])+' ('+str(gender_value)+')',
     							xaxis = dict(
     										title='Age Groups (yrs old)',
     										domain=[0,1]),
