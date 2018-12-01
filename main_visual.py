@@ -103,6 +103,7 @@ all_age_groups = ['000','004','009','014','019','024','029','034','039','044','0
 
 
 ## App Layout ##
+app.title='NTU NBD Visualization'
 
 app.layout = html.Div([
 
@@ -120,7 +121,7 @@ app.layout = html.Div([
     html.Div([
 
         ## Title and paragraphs ##
-        html.H1('Lulu Lulu Lulu Dashboard'),
+        html.H1('National Burden of Disease Dashboard'),
         html.Div([
             html.P('This dashboard is a simple tool to visualize disease prevalence across different age groups in Taiwan.'),
             html.P('An evidence-based comparative risk assessment revealed that substantial mortality burden and premature deaths could be attributable to cardiometabolic risk factors, tobacco smoking, alcohol use, viral hepatitis, and ambient air pollution among Taiwanese adults. The study was led by Wei-Cheng Lo, a doctoral student from the College of Public Health at National Taiwan University. The investigators estimated the number of deaths and years of life lost that were attributable to 13 metabolic, lifestyle, infectious, and environmental risk factors in Taiwan. These findings were published in Population Health Metrics in May.'),

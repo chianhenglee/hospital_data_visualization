@@ -18,7 +18,7 @@ header .header_image {
 }
 
 header .header_text {
-  font-family: Times;
+  font-family: "STHeiti", Georgia;   /*   STSong  BiauKai  STHeiti   */
   color: white;
   padding-left: 15px;
 }
@@ -85,7 +85,8 @@ p {
 }
 
 .graph {
-
+  padding: 0px;
+  margin: 0px;
 }
 
 
