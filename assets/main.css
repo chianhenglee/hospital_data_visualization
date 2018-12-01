@@ -118,8 +118,10 @@ p {
     color: white;
 }
 
-
-
+/*  remove the undo button on the bottom left of dash graph  */
+._dash-undo-redo {
+  display: none;
+}
 
 
 
