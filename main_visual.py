@@ -163,6 +163,7 @@ app.layout = html.Div([
             dcc.Graph(
                 id='my_graph',
                 className='graph',
+                config={'displayModeBar': False},
                 figure={
                     'data': [],
                     'layout':
