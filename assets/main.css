@@ -4,22 +4,34 @@ body {
 }
 
 header {
+  display: flex;
+  align-items:center;
   background-color: #007440;
   width: 100%;
-  padding: 0;
-  margin: 0;
+  height: 80px;
+}
 
-  height: 100px;
+header .header_image {
+  display: inline;
+  width:80px;
+  height: 80px;
+}
+
+header .header_text {
+  font-family: Times;
+  color: white;
+  padding-left: 15px;
 }
 
 footer {
+  display: flex;
+  align-items: center;
   background-color: #007440;
   width: 100%;
-  padding: 0;
-  margin: 0;
-
-  height: 80px;
+  height: 40px;
 }
+
+
 
 .page-content {
   font-family: Helvetica;

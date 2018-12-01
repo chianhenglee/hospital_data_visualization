@@ -107,10 +107,14 @@ all_age_groups = ['000','004','009','014','019','024','029','034','039','044','0
 app.layout = html.Div([
 
     ### Header ###
-    html.Div(
+    html.Div([
         html.Header([
+            html.Img(className='header_image',src='assets/short_logo.png'),
+            html.H1(className='header_text',
+                    children='國立台灣大學公共衛生學系 流行病學研究所'),
+
             ]),
-        ),
+        ],className='header_div'),
 
     ### Body ###
     html.Div([
@@ -179,9 +183,10 @@ app.layout = html.Div([
     ### Footer
     html.Div(
         html.Footer([
-            html.Br(),
+            #html.Br(),
             html.H5('2016 Taiwan National Burden of Disease'),
-            html.H5('School of Public Health, National Taiwan University')
+            html.H5('School of Public Health, National Taiwan University'),
+            html.H5('2018 All rights reserved.'),
             ]
         ),
     )
