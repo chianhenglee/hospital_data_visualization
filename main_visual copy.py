@@ -201,7 +201,7 @@ app.layout = html.Div([
 
 ##### callback 1: Male #####
 @app.callback(
-    Output('my_graph', 'figure'),
+    [Output('my_graph', 'figure')],
     [Input('submit-button_barcharts', 'n_clicks')],
     [State('my_bundle_id_symbol', 'value')])
 
@@ -267,7 +267,7 @@ def update_graph_male(n_clicks, id_value):
     bar_charts_data_male = go.Data(traces_male)
 
     bar_charts_layout = go.Layout(
-                                title = 'Male',
+                                #title = str(id_name_dict[id_value])+' ('+str(gender_value)+')',
     							xaxis = dict(
     										title='Age Groups (yrs old)',
     										domain=[0,1]),
@@ -285,15 +285,17 @@ def update_graph_male(n_clicks, id_value):
     return fig_male
 
 
-##### callback 1: Male #####
+
+##### callback 2: Female #####
 @app.callback(
-    Output('my_graph2', 'figure'),
+    [Output('my_graph', 'figure')],
     [Input('submit-button_barcharts', 'n_clicks')],
     [State('my_bundle_id_symbol', 'value')])
 
 def update_graph_female(n_clicks, id_value):
 
-    traces_male = [] 
+
+    trace_female = []
     # loop through filenames and store data corresponding to each file into a trace
     for j in range(len(all_data)):
         try:
@@ -301,8 +303,7 @@ def update_graph_female(n_clicks, id_value):
             temp_df = all_data[j][id_value]
             # get the dataframe of the given bundle_id
 
-            filtered_df_male = temp_df[temp_df['sex']=='2']
-
+            filtered_df_female = temp_df[temp_df['sex']=='2']
             # separate male and female data
 
             ## ADD Rows with zeros for missing age groups
@@ -310,51 +311,51 @@ def update_graph_female(n_clicks, id_value):
             # To deal with that, here find out which age groups are missing and add the age group in with the corresponding data (indicator) being 0.
             # Beware that this is just for plotting purposes, not necessarily meaningful scientifically.
 
-            dummy_list2_male = []
+            dummylist2_female = []
 
             for a in all_age_groups:
-                if a in filtered_df_male['age_group'].values:
+
+                if a in filtered_df_female['age_group'].values:
                     continue
                 else:
-                    dummy_list2_male.append([id_value,'2',a,0,0,0])
+                    dummy_list2_female.append([id_value,'2',a,0,0,0])
 
+            df_temp_female=pd.DataFrame(
+                                data=dummy_list2_female,
+                                columns=['bundle_id', 'sex', 'age_group', 'measurement', 'enrol','indicator'])            
 
-            df_temp_male=pd.DataFrame(
-                                data=dummy_list2_male,
-                                columns=['bundle_id', 'sex', 'age_group', 'measurement', 'enrol','indicator'])
+            filtered_df_female = filtered_df_female.append(df_temp_female,ignore_index=True).sort_values('age_group')
 
-            filtered_df_male =   filtered_df_male.append(df_temp_male,    ignore_index=True).sort_values('age_group')
 
             ##### Now get the data into the form for bar charts
             # getting a list of tuples (age group,indicator)
 
-            sorted_filtered_df_male = [(aaa,vvv) for aaa,vvv in zip(filtered_df_male['age_group'],filtered_df_male['indicator']*100)] # unit is now %
+            sorted_filtered_df_female = [(aaa,vvv) for aaa,vvv in zip(filtered_df_female['age_group'],filtered_df_female['indicator']*100)] # unit is now %
 
             #print(sorted_filtered_df)
             # trace for bar chart
-            
-            trace_iter_male = go.Bar(
+
+            trace_iter_female = go.Bar(
                 #name=file_names[j],
                 name=legend_names[j],
                 #x=[jj[0] for jj in sorted_filtered_df],
                 x=['<1','1~4','5~9','10~14','15~19','20~24','25~29','30~34','35~39','40~44','45~49','50~54','55~59','60~64','65~69','70~74','75~79','80~84','85~89','90~94','>95'],
-                y=[jj[1] for jj in sorted_filtered_df_male],
+                y=[jj[1] for jj in sorted_filtered_df_female],
                 width=0.5,
                 orientation = 'v',
                 opacity = 0.6,
                 showlegend = True)
 
-            traces_male.append(trace_iter_male)
+            traces_female.append(trace_iter_female)
 
         except:
             pass
 
 
-    bar_charts_data_male = go.Data(traces_male)
+    bar_charts_data_female = go.Data(traces_female)
 
     bar_charts_layout = go.Layout(
                                 #title = str(id_name_dict[id_value])+' ('+str(gender_value)+')',
-                                title = 'Female',
                                 xaxis = dict(
                                             title='Age Groups (yrs old)',
                                             domain=[0,1]),
@@ -366,11 +367,9 @@ def update_graph_female(n_clicks, id_value):
                                 width=1000
                                 )
 
+    fig_female = dict(data=bar_charts_data_female, layout=bar_charts_layout)
 
-    fig_male = dict(data=bar_charts_data_male, layout=bar_charts_layout)
-
-    return fig_male
-
+    return fig_female
 
 
 
