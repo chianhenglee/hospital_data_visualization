@@ -112,7 +112,7 @@ app.layout = html.Div([
         html.Header([
             html.Img(className='header_image',src='assets/short_logo.png'),
             html.H1(className='header_text',
-                    children='國立台灣大學公共衛生學系 流行病學研究所'),
+                    children='國立台灣大學公共衛生學院'),
 
             ]),
         ],className='header_div'),
@@ -124,7 +124,8 @@ app.layout = html.Div([
         html.H1('National Burden of Disease Dashboard'),
         html.Div([
             html.P('This dashboard is a simple tool to visualize disease prevalence across different age groups in Taiwan.'),
-            html.P('An evidence-based comparative risk assessment revealed that substantial mortality burden and premature deaths could be attributable to cardiometabolic risk factors, tobacco smoking, alcohol use, viral hepatitis, and ambient air pollution among Taiwanese adults. The study was led by Wei-Cheng Lo, a doctoral student from the College of Public Health at National Taiwan University. The investigators estimated the number of deaths and years of life lost that were attributable to 13 metabolic, lifestyle, infectious, and environmental risk factors in Taiwan. These findings were published in Population Health Metrics in May.'),
+            html.P('本研究計畫擬採用全球疾病負擔(Global Burden of Disease, GBD)的研究架構，利用台灣本土健康資料庫，推估台灣族群因罹病造成的失能、死亡、以及醫療花費負擔，並利用系統性的方法量化並比較可歸因於危險因子的疾病負擔。所有的分析都會以年齡與性別分層，並且依年度別與縣市地區別來進行，探討健康議題上社會不平等的情況。'),
+            html.P('本計畫預計將建立台灣疾病負擔之健康指標資料庫，是首次將現有台灣健康資料完整盤點並加值應用的嘗試，縱向觀察不同年代國人疾病負擔發展趨勢，橫向評比地區別、族群別的危險暴露與疾病負擔分布，除了作為整體衛生政策擬定之參考之外，亦剖析台灣健康議題上社會不平等的根本原因。疾病負擔指標資料庫的建置亦成為相關延伸研究的基礎輸入(basic inputs)，除了協助評比台灣地區別重要族群健康指標(SDG, HAQ Index)之外，亦將作為評估台灣族群健康資本的重要依據，可應用於產業經濟轉型評估參考。此外，疾病負擔相關結果亦反饋全球疾病負擔計畫，補足全球疾病負擔報告中對單一國家層面報告之不足。另一方面，透過台灣族群疾病負擔的評估，將作為未來衛生政策的策略擬定更多元的參考價值，提供以證據導向(evidence-based)為基礎的衛生政策規劃，補充目前政策擬定架構之不足。'),
             ],className='paragraph'),
 
         ## Entire interactive graph section ##
@@ -188,7 +189,7 @@ app.layout = html.Div([
             #html.Br(),
             html.H5('2016 Taiwan National Burden of Disease'),
             html.H5('School of Public Health, National Taiwan University'),
-            html.H5('2018 All rights reserved.'),
+            #html.H5('2018 All rights reserved.'),
             ]
         ),
     )
